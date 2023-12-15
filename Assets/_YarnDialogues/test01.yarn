@@ -1,0 +1,22 @@
+title: Rozmowa_o_dupie
+---
+<<declare $gold = 0>>
+Wow!
+Ale masz fajną dupę!
+Adam: A ja w nią dobrze wkładam
+===
+title: Jedzenie
+---
+Chcesz coś?
+-> Gofra!
+    No dobra, to chodź
+-> Twojej duszy
+    ej ej ej
+    -> No weź, proszę
+        <<set $gold to 8>>
+        DOSTAJESZ $gold złota!
+    -> no co ty gościu
+        <<set $gold to 10>>
+        Trzymaj.
+        OTRZYMAŁEŚ $gold złota!
+===

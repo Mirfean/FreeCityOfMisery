@@ -1,0 +1,199 @@
+title: Piwnica_start
+position: -249,-630
+---
+<<declare $JanWelcomeInBasement_Act1 = true>>
+<<declare $MichaelStraus_Basement_talk = false>>
+
+<<declare $Michael_basement_talked = false>>
+<<declare $KnowNameOfMichael = false>>
+<<declare $MichaelBasementTrust = 0>>
+<<declare $MichaelBasementBonusKnowledge = false>>
+<<declare $MichaelFight = false>>
+<<declare $MichaelFight_Won = false>>
+
+<<declare $FoundTheaterInfoInBasement = false>>
+<<declare $FoundNameInfoInBasement = false>>
+
+<<declare $Untouched = "Untouched">>
+<<declare $WasOffered = "WasOffered">>
+<<declare $WasDisplayed = "WasDisplayed">>
+===
+
+title: Przodownik_Jan_basement_base
+position: 747,-491
+---
+<<if $JanWelcomeInBasement_Act1>>
+    <<jump Przodownik_Jan_rozmowa_1>>
+<<endif>>
+
+-> Kto go znalazł?
+    <<jump Przodownik_Jan_Sasiad>>
+-> Kim był wisielec?
+    <<jump Przodownik_Jan_kim_byl_wisielec>>
+-> Dzięki, na razie to tyle
+    Przodownik Jan: Do zobaczenia.
+===
+title: Przodownik_Jan_rozmowa_1
+position: 850,-204
+---
+Przodownik Jan: Dobry wieczór komisarzu. 
+Komisarz Józef: Witaj Janie, dobrze cię widzieć.
+Przodownik Jan: Pana również. Pogoda nie dopisuje, co?
+<<wait 2>>
+Komisarz Józef: Jeśli nadal będzie tak lało, to kupię łódź na patrol.
+Komisarz Józef: Jak wygląda sytuacja?
+
+Przodownik Jan: Wisielec w piwnicy nr 3. Drzwi były otwarte. Jeden z mieszkańców kamienicy znalazł trupa.
+<<set $JanWelcomeInBasement_Act1 to false>>
+<<jump Przodownik_Jan_basement_base>>
+===
+title: Przodownik_Jan_Sasiad
+position: 407,-566
+---
+Przodownik Jan: Michael Straus, lat 53. Mieszkaniem kamienicy.
+Przodownik Jan: Pracuje w stoczni. Papiery wyglądają w porządku.
+Przodownik Jan: Zatrzymaliśmy go tutaj aż nie przyjedziesz. To ten z kubkiem herbaty.
+<<set $KnowNameOfMichael to true>>
+<<jump Przodownik_Jan_basement_base>>  
+===
+title: Przodownik_Jan_kim_byl_wisielec
+position: 423,-239
+---
+Przodownik Jan: Na ten moment niewiele wiemy.
+Przodownik Jan: Dokumentów brak. Jedyny świadek twierdzi, że nie go znał.
+Przodownik Jan: Nasi pytają po sąsiadach. Na razie bez skutku.
+<<jump Przodownik_Jan_basement_base>> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===
+title: Michael_basement_base
+position: -635,-322
+---
+<<if not visited("Michael_basement_welcome")>> 
+    <<jump Michael_basement_welcome>>
+<<endif>>
+-> Czymś się Pan zajmuje?
+    <<jump Michael_basement_job>>
+-> Kiedy go Pan znalazł?
+    <<jump Michael_basement_time_of_find>>
+-> Znał go Pan?
+    <<jump Michael_basement_knew_hangman>>
+-> Co Pan tu robił?
+    <<jump Michael_basement_whatareyoudoinghere>>
+-> *Przekonaj go <<if not $MichaelFight>>
+    WALKA
+    <<set $MichaelFight to true>>
+    <<if $MichaelBasementTrust > 2 and not visited("Michael_basement_bonus")>>
+    <<jump Michael_basement_bonus>>
+    <<endif>>
+-> Dziękuję za pomoc.
+    <<if $MichaelBasementTrust > 2 and not visited("Michael_basement_bonus")>>
+        <<jump Michael_basement_bonus>>
+    <<endif>>
+===
+title: Michael_basement_bonus
+position: -362,378
+---
+*Gdy planujesz już odejść, czujesz jak Michael łapie cię delikatnie za ramię marynarki.
+Michael Straus: Wiesz co? Nie wyglądasz na taką mendę jak inni. Powiem ci coś.
+Michael Straus: Ta komórka od dawna była niczyja. A mimo to, czasem wieczorami gdy schodziłem po słoiki, słyszałem tam jakieś odgłosy. 
+Michael Straus: Coś przypominającego skrobanie o cegły i mamrotanie, jakby do samego siebie.
+Michael Straus: Za którymś razem jak byłem lekko podpity, spróbowałem otworzyć drzwi myśląc, że to pewnie jakiś bezdomny.
+Michael Straus: Szarpnąłem za drzwi ale były zamknięte od środka. Wtedy też wszelkie dźwięki ucichły. Jakby ktoś w środku się przestraszył.
+Komisarz Józef: Często było słychać te odgłosy?
+Michael Straus: Raz na tydzień lub dwa, ale zaczęło się jakoś na początku lata
+Komisarz Józef: Czyli jakieś 4 miesiące?
+Michael Straus: I do tego tak różnie. Czasem nawet dwa razy w tygodniu a później cisza na trzy tygodnie.
+Komisarz Józef: Dzięki.
+===
+
+title: Michael_basement_welcome
+position: -886,-530
+---
+Komisarz Józef: Witam, Komisarz Józef Nawrocki. Chciałbym Pana zapytać o tutejszego denata.
+<<if $KnowNameOfMichael>>
+    Michael Straus: Kogo?
+<<else>>
+    ?: Kogo?
+<<endif>>
+Komisarz Józef: Trupa którego Pan znalazł.
+<<if $KnowNameOfMichael>>
+    Komisarz Józef: Pan Michael Straus jak mniemam?
+    Michael Straus: Tak. 
+    <<set $MichaelBasementTrust = $MichaelBasementTrust + 1>>
+<<else>>
+    Komisarz Józef: Pańska godność?
+    Michael Straus: Michael Straus.
+<<endif>>
+<<set $Michael_basement_talked = true >>
+===
+title: Michael_basement_job
+position: -806,162
+---
+Michael Straus: Pracuję na stoczni jako spawacz.
+Michael Straus: Zmianę kończyłem o 18 i po robocie wyskoczyliśmy z chłopakami na piwo.
+Komisarz Józef: Można wiedzieć dokąd?
+Michael Straus: Niedaleko stoczni, knajpa Złoty Denar. 
+Komisarz Józef: Czy ktoś potwierdzi Pana obecność tam?
+Michael Straus: Karl był dziś na barze, porządny chłop. Chodzę tam regularnie, zna mnie.
+<<jump Michael_basement_base>>
+===
+title: Michael_basement_whatareyoudoinghere
+position: -266,-332
+---
+Michael Straus: Żona wysłała mnie po przetwory. Znalazłem martwego i teraz marznę tu drugą godzinę.
+-> Komisarz Józef: Jak tylko tu skończę to jest Pan wolny. 
+    <<set $MichaelBasementTrust = $MichaelBasementTrust + 1>>
+-> Komisarz Józef: O ile nie znajdę nic co łączyło Pana z tym zdarzeniem.
+    Michael Straus: Panie! Przecież to nie ja, sam się powiesił. Widać przecież!
+    Michael Straus: Ja gnoja nie znałem, a tym bardziej nie pomagałem mu w niczym.
+
+<<jump Michael_basement_base>>
+===
+title: Michael_basement_time_of_find
+position: -1037,2
+---
+Michael Straus: Wróciłem z roboty koło 21. Zjadłem kolację, pobawiłem się chwilę z psem i żona wysłała mnie
+Michael Straus: Po drodze ujrzałem 
+Komisarz Józef: Więc znalazł go Pan między 22 a 23.
+Michael Straus: No będzie jakoś tak.
+<<jump Michael_basement_base>>
+===
+title: Michael_basement_knew_hangman
+position: -470,37
+---
+Michael Straus: Pierwszy raz go widzę. Jakiś młodziak, głupi do tego.
+Komisarz Józef: Czemu Pan tak sądzi?
+Michael Straus: Gdyby był mądry, to by się nie wieszał...
+<<jump Michael_basement_base>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+===
+title: Hanged_basement_base
+position: 100,-552
+---
+Siemanko
+===

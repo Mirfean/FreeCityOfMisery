@@ -1,0 +1,3 @@
+rep "FreeCityOfMisery@Mirfean@cloud"
+  path "/"
+    smartbranch "/main"

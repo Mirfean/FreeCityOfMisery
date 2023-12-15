@@ -1,0 +1,28 @@
+{
+    "name": "DialogueSystemEditor",
+    "rootNamespace": "",
+    "references": [
+        "DialogueSystem",
+        "PixelCrushers",
+        "PixelCrushersEditor",
+        "YarnSpinner.Unity",
+        "YarnSpinner.Unity.Editor",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "YarnSpinner.dll",
+        "YarnSpinner.Compiler.dll",
+        "Yarn.Google.Protobuf.dll",
+        "Yarn.Antlr4.Runtime.Standard.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

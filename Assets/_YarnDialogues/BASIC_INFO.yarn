@@ -1,0 +1,14 @@
+title: Detektyw_Stats
+---
+<<declare $D_force = 5>>
+<<declare $D_authority = 7>>
+<<declare $D_charisma = 5>>
+<<declare $D_logic = 5>>
+<<declare $D_sanity = 100>>
+
+<<declare $Jan_przod = "Przodownik Jan">>
+===
+title: Presentation
+---
+Komisarz Józef: Tak
+===

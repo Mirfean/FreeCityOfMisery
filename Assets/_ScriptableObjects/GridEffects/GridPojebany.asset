@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b57a2f0c8f707f498781d6db153cdf3, type: 3}
+  m_Name: GridPojebany
+  m_EditorClassIdentifier: 
+  ID: 42069
+  Width: 5
+  Height: 3
+  StartingGamePieces:
+  - IndexX: 1
+    IndexY: 0
+    gamePiece: {fileID: 11400000, guid: 9319fef0eb120254ba6f08ba7ea62c8d, type: 2}
+    rotation: 1
+  serializableField:
+  - IndexX: 0
+    IndexY: 0
+    Element: 0
+  - IndexX: 0
+    IndexY: 1
+    Element: 1
+  - IndexX: 0
+    IndexY: 2
+    Element: 1
+  - IndexX: 1
+    IndexY: 0
+    Element: 0
+  - IndexX: 1
+    IndexY: 1
+    Element: 0
+  - IndexX: 1
+    IndexY: 2
+    Element: 0
+  - IndexX: 2
+    IndexY: 0
+    Element: 0
+  - IndexX: 2
+    IndexY: 1
+    Element: 1
+  - IndexX: 2
+    IndexY: 2
+    Element: 0
+  - IndexX: 3
+    IndexY: 0
+    Element: 1
+  - IndexX: 3
+    IndexY: 1
+    Element: 0
+  - IndexX: 3
+    IndexY: 2
+    Element: 1
+  - IndexX: 4
+    IndexY: 0
+    Element: 0
+  - IndexX: 4
+    IndexY: 1
+    Element: 0
+  - IndexX: 4
+    IndexY: 2
+    Element: 0

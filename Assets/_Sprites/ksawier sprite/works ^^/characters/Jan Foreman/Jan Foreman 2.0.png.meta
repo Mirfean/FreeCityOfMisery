@@ -1,0 +1,2328 @@
+fileFormatVersion: 2
+guid: d25430a21ad0bde4d86578715781972f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 79
+        width: 5
+        height: 10
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 7258cb14b18ac9d4baa94a6198ef664b
+        position: {x: 2.5462036, y: 0.55384064, z: 0}
+        rotation: {x: 0, y: 0, z: 0.722301, w: 0.6915788}
+        length: 1.796549
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 346a9085a31b3f748abafcbf6ae17ecb
+      internalID: 91388411
+      vertices:
+      - {x: 5, y: 5}
+      - {x: 5, y: 10}
+      - {x: 0, y: 10}
+      - {x: 0, y: 5}
+      - {x: 0, y: 0}
+      - {x: 5, y: 0}
+      indices: 000000000200000001000000000000000300000002000000000000000500000003000000030000000500000004000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 5}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      - {x: 3, y: 4}
+      - {x: 4, y: 5}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 71
+        width: 2
+        height: 6
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 11add675bac9d9c40892cbfe2b972a3d
+        position: {x: 0.9812279, y: 5.566803, z: 0}
+        rotation: {x: 0, y: 0, z: -0.6952285, w: 0.7187888}
+        length: 3.8303432
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: caeececf2ade5b74aaebb6c11e6ec553
+      internalID: -1843871779
+      vertices:
+      - {x: 2, y: 6}
+      - {x: 0, y: 6}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 44
+        width: 7
+        height: 14
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: a83bdb20ed7d7544d9a51c3f10d8cf3e
+        position: {x: 3.560688, y: 13.508305, z: 0}
+        rotation: {x: 0, y: 0, z: -0.69283164, w: 0.7210994}
+        length: 2.9287393
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 4612b5b42f3490945b9c2d9ee20c3f57
+      internalID: -1320625167
+      vertices:
+      - {x: 7, y: 7}
+      - {x: 7, y: 12}
+      - {x: 7, y: 14}
+      - {x: 2, y: 14}
+      - {x: 0, y: 14}
+      - {x: 0, y: 6}
+      - {x: 0, y: 1.0009999}
+      - {x: 0, y: 0}
+      - {x: 7, y: 0}
+      indices: 000000000300000001000000000000000500000003000000000000000600000005000000000000000800000006000000010000000300000002000000030000000500000004000000060000000800000007000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 8}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      - {x: 3, y: 4}
+      - {x: 4, y: 5}
+      - {x: 5, y: 6}
+      - {x: 6, y: 7}
+      - {x: 7, y: 8}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 61
+        width: 2
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 461c624a65c33db47ace9c9995799d64
+        position: {x: 1.0130558, y: 3.5960464, z: 0}
+        rotation: {x: 0, y: 0, z: -0.7042728, w: 0.7099295}
+        length: 3.2597437
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 9285e872a9121fa428b2303e204ed7a3
+      internalID: -146549425
+      vertices:
+      - {x: 2, y: 4}
+      - {x: 0, y: 4}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 53
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 4ee002feb52a83944b7f3b0285bcdf56
+        position: {x: 0.98697853, y: 1.6085052, z: 0}
+        rotation: {x: 0, y: 0, z: -0.6912305, w: 0.7226344}
+        length: 1.1746279
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: e3b83cac8aec2d843be1dd6f643cbbcc
+      internalID: 471251463
+      vertices:
+      - {x: 2, y: 2}
+      - {x: 0, y: 2}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 35
+        width: 2
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 976609f4b8c0d7c439719375ba85a07f
+        position: {x: 1.0167828, y: 4.52071, z: 0}
+        rotation: {x: 0, y: 0, z: -0.69297445, w: 0.72096217}
+        length: 3.943973
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 27a949df69de15843808fc1c01962771
+      internalID: -2079118093
+      vertices:
+      - {x: 1.9296674, y: 0}
+      - {x: 2, y: 5}
+      - {x: 0, y: 5}
+      - {x: 0, y: 0}
+      indices: 000000000200000001000000000000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 20
+        width: 2
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 62158bf04e275d74fb12ff782d16255e
+        position: {x: 1.0167828, y: 5.5520325, z: 0}
+        rotation: {x: 0, y: 0, z: -0.6991486, w: 0.71497643}
+        length: 5.229809
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 0ec5c3b16e598b841ab38a5b766bc293
+      internalID: 2084204612
+      vertices:
+      - {x: 2, y: 6}
+      - {x: 0, y: 6}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 7
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 670e09c8d9d352c4cb46d554c401a017
+        position: {x: 1.2118759, y: 3.4518175, z: 0}
+        rotation: {x: 0, y: 0, z: -0.69631565, w: 0.71773577}
+        length: 2.5764124
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 27ca19322a3ec6744915d3e2c8005e6d
+      internalID: -2091678048
+      vertices:
+      - {x: 3, y: 4}
+      - {x: 0, y: 4}
+      - {x: 0, y: 0}
+      - {x: 3, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 65
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: db3fbab892ad4494aabff032ede1e1ac
+        position: {x: 3.1705017, y: 5.423477, z: 0}
+        rotation: {x: 0, y: 0, z: -0.69588774, w: 0.71815056}
+        length: 4.957825
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: ebd9a513552dac749a8203d8a94a8a98
+      internalID: -2132484868
+      vertices:
+      - {x: 7, y: 4.998}
+      - {x: 7, y: 6}
+      - {x: 2, y: 6}
+      - {x: 0, y: 6}
+      - {x: 0, y: 0}
+      - {x: 7, y: 0}
+      indices: 000000000200000001000000000000000500000002000000020000000400000003000000020000000500000004000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 5}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      - {x: 3, y: 4}
+      - {x: 4, y: 5}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 71
+        width: 2
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 9847d837c101aee40a0ae9ae904956a9
+        position: {x: 1.0410385, y: 5.6274414, z: 0}
+        rotation: {x: 0, y: 0, z: -0.69920784, w: 0.7149185}
+        length: 5.268817
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 5ea61decc0c41d5428a870520d198465
+      internalID: -865176161
+      vertices:
+      - {x: 2, y: 6}
+      - {x: 0, y: 6}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 60
+        width: 2
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 5b72468dc87b94d4d88b8f63ad500fe0
+        position: {x: 0.884964, y: 3.5171776, z: 0}
+        rotation: {x: 0, y: 0, z: -0.68922514, w: 0.72454727}
+        length: 3.1253936
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: f97fbe15b854e7b4d87b27010b70de77
+      internalID: -2130614015
+      vertices:
+      - {x: 2, y: 4}
+      - {x: 0, y: 4}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 51
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 45fac5616cc9eda4993d79077f3d3a99
+        position: {x: 0.96300507, y: 1.6699905, z: 0}
+        rotation: {x: 0, y: 0, z: -0.6877599, w: 0.72593826}
+        length: 1.4457948
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 7d93bafd8baf6524799ff13333e83163
+      internalID: 959158291
+      vertices:
+      - {x: 2, y: 2}
+      - {x: 0, y: 2}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 2
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 4b392dd3e115de248a18dd951419b07a
+        position: {x: 0.884964, y: 4.530758, z: 0}
+        rotation: {x: 0, y: 0, z: -0.6890428, w: 0.72472066}
+        length: 3.86777
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 80e574dfb642aef439e92ebff3cb080e
+      internalID: 1375731867
+      vertices:
+      - {x: 2, y: 0}
+      - {x: 2, y: 5}
+      - {x: 0, y: 5}
+      - {x: 0, y: 0}
+      indices: 000000000200000001000000000000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 19
+        width: 2
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 9c71369dc80482a4c95b0bfc554ca58b
+        position: {x: 1.0020218, y: 5.459511, z: 0}
+        rotation: {x: 0, y: 0, z: -0.6910142, w: 0.7228412}
+        length: 4.3354616
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: ad8ab8d41b05b504d90c6a7ff8d92b56
+      internalID: 1340156957
+      vertices:
+      - {x: 2, y: 6}
+      - {x: 0, y: 6}
+      - {x: 0, y: 0}
+      - {x: 2, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Jan Foreman 2.0_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 6
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones:
+      - name: bone_1
+        guid: 54b2ab14a582db84fa3942016e64ab8f
+        position: {x: 0.7679062, y: 3.2812576, z: 0}
+        rotation: {x: 0, y: 0, z: -0.59051716, w: 0.8070251}
+        length: 2.5790703
+        parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 4278190335
+      spriteID: 7e616977b86d59a4d83197c0b57b5580
+      internalID: -1676877438
+      vertices:
+      - {x: 3, y: 4}
+      - {x: 0, y: 4}
+      - {x: 0, y: 0}
+      - {x: 3, y: 0}
+      indices: 000000000300000001000000010000000300000002000000
+      edges:
+      - {x: 0, y: 1}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 3}
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    outline:
+    - - {x: -6, y: 29}
+      - {x: -6, y: 39}
+      - {x: -1, y: 39}
+      - {x: -1, y: 29}
+    - - {x: -6, y: 15}
+      - {x: -6, y: 21}
+      - {x: 1, y: 21}
+      - {x: 1, y: 15}
+    - - {x: -6, y: -6}
+      - {x: -6, y: 8}
+      - {x: 1, y: 8}
+      - {x: 1, y: -6}
+    - - {x: 14, y: 1}
+      - {x: 14, y: 3}
+      - {x: 16, y: 3}
+      - {x: 16, y: 1}
+    - - {x: 14, y: 10}
+      - {x: 14, y: 14}
+      - {x: 16, y: 14}
+      - {x: 16, y: 10}
+    - - {x: 14, y: 21}
+      - {x: 14, y: 27}
+      - {x: 16, y: 27}
+      - {x: 16, y: 21}
+    - - {x: -21, y: 21}
+      - {x: -21, y: 27}
+      - {x: -19, y: 27}
+      - {x: -19, y: 21}
+    - - {x: -21, y: 11}
+      - {x: -21, y: 15}
+      - {x: -19, y: 15}
+      - {x: -19, y: 11}
+    - - {x: -21, y: 3}
+      - {x: -21, y: 5}
+      - {x: -19, y: 5}
+      - {x: -19, y: 3}
+    - - {x: -20, y: -15}
+      - {x: -20, y: -10}
+      - {x: -18, y: -10}
+      - {x: -18, y: -15}
+    - - {x: -20, y: -30}
+      - {x: -20, y: -24}
+      - {x: -18, y: -24}
+      - {x: -18, y: -30}
+    - - {x: -20, y: -43}
+      - {x: -20, y: -39}
+      - {x: -17, y: -39}
+      - {x: -17, y: -43}
+    - - {x: 14, y: -44}
+      - {x: 14, y: -40}
+      - {x: 17, y: -40}
+      - {x: 17, y: -44}
+    - - {x: 14, y: -31}
+      - {x: 14, y: -25}
+      - {x: 16, y: -25}
+      - {x: 16, y: -31}
+    - - {x: 14, y: -17}
+      - {x: 14, y: -12}
+      - {x: 16, y: -12}
+      - {x: 16, y: -17}
+    physicsShape: []
+    bones:
+    - name: torso top
+      guid: f6ff813fa037f7c438927ba4b0c7faa5
+      position: {x: 47.144318, y: 65.44303, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7018887, w: 0.71228665}
+      length: 5.461932
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278190335
+    - name: torso bottom
+      guid: 7158116e6429a0345994a0c72a67fbc5
+      position: {x: -7.8007927, y: -0.41532105, z: 0}
+      rotation: {x: 0, y: -0, z: -0.9998495, w: 0.017350236}
+      length: 12.347108
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    - name: head
+      guid: 4c32e491de0f3e2408eff1f9b0f7415f
+      position: {x: 13.576111, y: 1.1336477, z: 0}
+      rotation: {x: 0, y: 0, z: -0.01893704, w: 0.9998207}
+      length: 3.1316323
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    - name: left arm top
+      guid: 1af4b33304ae38f43bf17280b17b86a6
+      position: {x: 11.551577, y: -17.90892, z: 0}
+      rotation: {x: 0, y: -0, z: 0.9998821, w: 0.015357564}
+      length: 5.4372563
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    - name: right hand top
+      guid: 50ff408d89394b44c9159bc111b24398
+      position: {x: 10.952552, y: 17.227137, z: 0}
+      rotation: {x: 0, y: -0, z: 0.99999994, w: 0.0003453056}
+      length: 5.3499837
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4294901760
+    - name: right leg top
+      guid: 8dcc3661f0e29da43a091dbe6523dfe0
+      position: {x: -26.007944, y: 15.794096, z: 0}
+      rotation: {x: 0, y: -0, z: -0.9996978, w: 0.024583802}
+      length: 4.205282
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    - name: left leg top
+      guid: 382cac335f566714f92271fe34030159
+      position: {x: -27.540125, y: -17.999245, z: 0}
+      rotation: {x: 0, y: -0, z: -0.99972445, w: 0.023474282}
+      length: 4.494967
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4278223103
+    - name: left arm bottom
+      guid: 386482800477cf84eba0a5f1c803223e
+      position: {x: 12.920872, y: 0.36650202, z: 0}
+      rotation: {x: 0, y: 0, z: 0.03231891, w: 0.9994776}
+      length: 3.7827764
+      parentId: 3
+      color:
+        serializedVersion: 2
+        rgba: 4278255488
+    - name: left hand
+      guid: ef40f7cf0cdba7c44aaee72d050ca0e0
+      position: {x: 10.907814, y: -0.20975706, z: 0}
+      rotation: {x: 0, y: 0, z: -0.009613377, w: 0.9999538}
+      length: 1.8183019
+      parentId: 7
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    - name: right hand bottom
+      guid: a1c2b884100760c468f78dc13ebb5efa
+      position: {x: 11.854715, y: 0.16882835, z: 0}
+      rotation: {x: 0, y: 0, z: 0.007697209, w: 0.9999704}
+      length: 3.7527962
+      parentId: 4
+      color:
+        serializedVersion: 2
+        rgba: 4294934528
+    - name: right hand
+      guid: e8425fadbc71aea4880dcfbff487ae92
+      position: {x: 10.00745, y: 0.000011024891, z: 0}
+      rotation: {x: 0, y: 0, z: 0.019988991, w: 0.9998002}
+      length: 1.7387894
+      parentId: 9
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    - name: right leg bottom
+      guid: c29d9c7eca514f74da5e63d1453c4afd
+      position: {x: 13.78967, y: -0.47787482, z: 0}
+      rotation: {x: 0, y: 0, z: -0.023725018, w: 0.99971855}
+      length: 5.4658494
+      parentId: 5
+      color:
+        serializedVersion: 2
+        rgba: 4286578943
+    - name: right foot
+      guid: 4ebe59ed23b881948949bf43adcb2e4c
+      position: {x: 15.046288, y: 0.19541629, z: 0}
+      rotation: {x: 0, y: 0, z: 0.056298375, w: 0.998414}
+      length: 3.5666547
+      parentId: 11
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    - name: left leg bottom
+      guid: e3b123bd9c031094a9ff39daec36a1bc
+      position: {x: 12.745741, y: -0.14289859, z: 0}
+      rotation: {x: 0, y: 0, z: -0.016123451, w: 0.99987}
+      length: 5.7329674
+      parentId: 6
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    - name: left foot
+      guid: a04b603bff2ce914696c7742c66831b8
+      position: {x: 15.151413, y: -0.08189155, z: 0}
+      rotation: {x: 0, y: 0, z: 0.060639348, w: 0.99815977}
+      length: 3.3827598
+      parentId: 13
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices:
+    - {x: 50.186146, y: 88.98412}
+    - {x: 43.789, y: 90.785995}
+    - {x: 42, y: 78.843}
+    - {x: 49.589027, y: 78.55988}
+    - {x: 66.91486, y: 77.23953}
+    - {x: 63.550323, y: 77.483864}
+    - {x: 62, y: 71.285}
+    - {x: 66.56757, y: 70.0354}
+    - {x: 32.163708, y: 70.66142}
+    - {x: 32.480076, y: 77.51992}
+    - {x: 28.351791, y: 70.62909}
+    - {x: 53, y: 65}
+    - {x: 49.443375, y: 71.51871}
+    - {x: 43.523605, y: 71.400345}
+    - {x: 43.88, y: 63.121}
+    - {x: 32.737, y: 61.059}
+    - {x: 33, y: 65}
+    - {x: 30.858, y: 66.662}
+    - {x: 29, y: 67}
+    - {x: 27.526, y: 64.791}
+    - {x: 27, y: 60}
+    - {x: 29.056, y: 59.234}
+    - {x: 32, y: 59}
+    - {x: 67.736, y: 60.059}
+    - {x: 68, y: 64}
+    - {x: 65.854996, y: 65.661}
+    - {x: 64, y: 66}
+    - {x: 62.524, y: 63.791}
+    - {x: 62, y: 59}
+    - {x: 64.053, y: 58.234}
+    - {x: 67, y: 58}
+    - {x: 53, y: 44}
+    - {x: 52.951168, y: 58.36768}
+    - {x: 42.204, y: 58.201}
+    - {x: 42, y: 44.603}
+    - {x: 44.829, y: 42}
+    - {x: 32.807, y: 53.046}
+    - {x: 33, y: 55}
+    - {x: 30.858, y: 56.662}
+    - {x: 29, y: 57}
+    - {x: 27.423, y: 54.826}
+    - {x: 27, y: 52}
+    - {x: 29.056, y: 51.233}
+    - {x: 32, y: 51}
+    - {x: 67.638, y: 51.144}
+    - {x: 67.756, y: 52.956}
+    - {x: 67, y: 55}
+    - {x: 64.053, y: 54.764}
+    - {x: 62, y: 54}
+    - {x: 62.42, y: 51.172}
+    - {x: 64, y: 49}
+    - {x: 66, y: 49}
+    - {x: 33.32987, y: 40.23922}
+    - {x: 29.553, y: 42}
+    - {x: 28, y: 35.103}
+    - {x: 32.50013, y: 34.035664}
+    - {x: 66.66987, y: 31.8714}
+    - {x: 66.66384, y: 38.63996}
+    - {x: 63.45104, y: 38.585724}
+    - {x: 63.288673, y: 32.047977}
+    - {x: 34, y: 19}
+    - {x: 32.484264, y: 27.268948}
+    - {x: 28.609213, y: 26.308796}
+    - {x: 29.301624, y: 19.160975}
+    - {x: 68, y: 18}
+    - {x: 66.87519, y: 25.548946}
+    - {x: 63.2092, y: 25.117146}
+    - {x: 63.31982, y: 17.772064}
+    - {x: 32.827, y: 5.4230003}
+    - {x: 35, y: 7}
+    - {x: 33.535, y: 10.674999}
+    - {x: 31, y: 13}
+    - {x: 28, y: 12}
+    - {x: 28.526, y: 7.209}
+    - {x: 30, y: 5}
+    - {x: 66.826004, y: 4.4230003}
+    - {x: 69, y: 6}
+    - {x: 67.534, y: 9.674999}
+    - {x: 65, y: 12}
+    - {x: 62, y: 11}
+    - {x: 62.524, y: 6.2089996}
+    - {x: 64, y: 4}
+    - {x: 28.168156, y: 77.38859}
+    indices: 000000000200000001000000000000000300000002000000040000000600000005000000040000000700000006000000080000005200000009000000080000000a000000520000000b0000000e0000000c0000000c0000000e0000000d0000000f00000013000000100000000f00000015000000130000000f0000001600000015000000100000001300000011000000110000001300000012000000130000001500000014000000170000001b00000018000000170000001d0000001b000000170000001e0000001d000000180000001b00000019000000190000001b0000001a0000001b0000001d0000001c0000001f00000022000000200000001f0000002300000022000000200000002200000021000000240000002600000025000000240000002800000026000000240000002a00000028000000240000002b0000002a000000260000002800000027000000280000002a000000290000002c0000002f0000002d0000002c000000310000002f0000002c00000033000000310000002d0000002f0000002e0000002f0000003100000030000000310000003300000032000000340000003600000035000000340000003700000036000000380000003b00000039000000390000003b0000003a0000003c0000003f0000003d0000003d0000003f0000003e000000400000004200000041000000400000004300000042000000440000004600000045000000440000004900000046000000440000004a000000490000004600000049000000470000004700000049000000480000004b0000004d0000004c0000004b000000500000004d0000004b00000051000000500000004d000000500000004e0000004e000000500000004f000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 3}
+    - {x: 1, y: 2}
+    - {x: 2, y: 3}
+    - {x: 4, y: 5}
+    - {x: 4, y: 7}
+    - {x: 5, y: 6}
+    - {x: 6, y: 7}
+    - {x: 8, y: 9}
+    - {x: 8, y: 10}
+    - {x: 9, y: 82}
+    - {x: 10, y: 82}
+    - {x: 11, y: 12}
+    - {x: 11, y: 14}
+    - {x: 12, y: 13}
+    - {x: 13, y: 14}
+    - {x: 15, y: 16}
+    - {x: 15, y: 22}
+    - {x: 16, y: 17}
+    - {x: 17, y: 18}
+    - {x: 18, y: 19}
+    - {x: 19, y: 20}
+    - {x: 20, y: 21}
+    - {x: 21, y: 22}
+    - {x: 23, y: 24}
+    - {x: 23, y: 30}
+    - {x: 24, y: 25}
+    - {x: 25, y: 26}
+    - {x: 26, y: 27}
+    - {x: 27, y: 28}
+    - {x: 28, y: 29}
+    - {x: 29, y: 30}
+    - {x: 31, y: 32}
+    - {x: 31, y: 35}
+    - {x: 32, y: 33}
+    - {x: 33, y: 34}
+    - {x: 34, y: 35}
+    - {x: 36, y: 37}
+    - {x: 36, y: 43}
+    - {x: 37, y: 38}
+    - {x: 38, y: 39}
+    - {x: 39, y: 40}
+    - {x: 40, y: 41}
+    - {x: 41, y: 42}
+    - {x: 42, y: 43}
+    - {x: 44, y: 45}
+    - {x: 44, y: 51}
+    - {x: 45, y: 46}
+    - {x: 46, y: 47}
+    - {x: 47, y: 48}
+    - {x: 48, y: 49}
+    - {x: 49, y: 50}
+    - {x: 50, y: 51}
+    - {x: 52, y: 53}
+    - {x: 52, y: 55}
+    - {x: 53, y: 54}
+    - {x: 54, y: 55}
+    - {x: 56, y: 57}
+    - {x: 56, y: 59}
+    - {x: 57, y: 58}
+    - {x: 58, y: 59}
+    - {x: 60, y: 61}
+    - {x: 60, y: 63}
+    - {x: 61, y: 62}
+    - {x: 62, y: 63}
+    - {x: 64, y: 65}
+    - {x: 64, y: 67}
+    - {x: 65, y: 66}
+    - {x: 66, y: 67}
+    - {x: 68, y: 69}
+    - {x: 68, y: 74}
+    - {x: 69, y: 70}
+    - {x: 70, y: 71}
+    - {x: 71, y: 72}
+    - {x: 72, y: 73}
+    - {x: 73, y: 74}
+    - {x: 75, y: 76}
+    - {x: 75, y: 81}
+    - {x: 76, y: 77}
+    - {x: 77, y: 78}
+    - {x: 78, y: 79}
+    - {x: 79, y: 80}
+    - {x: 80, y: 81}
+    weights:
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 2
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 2
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 2
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 2
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 3
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 3
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 3
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 3
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 4
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 4
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 4
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 0
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 9
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 7
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 1
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 1
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 1
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 1
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 1
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 10
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 8
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 5
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 5
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 5
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 5
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 6
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 6
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 6
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 6
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 11
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 11
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 11
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 11
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 13
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 13
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 13
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 13
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 12
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 14
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    - weight[0]: 1
+      weight[1]: 0
+      weight[2]: 0
+      weight[3]: 0
+      boneIndex[0]: 4
+      boneIndex[1]: 0
+      boneIndex[2]: 0
+      boneIndex[3]: 0
+    secondaryTextures: []
+    nameFileIdTable:
+      Jan Foreman 2.0_0: 91388411
+      Jan Foreman 2.0_1: -1843871779
+      Jan Foreman 2.0_10: 710334401
+      Jan Foreman 2.0_11: -2130614015
+      Jan Foreman 2.0_12: 917826574
+      Jan Foreman 2.0_13: 959158291
+      Jan Foreman 2.0_14: 1375731867
+      Jan Foreman 2.0_2: -1320625167
+      Jan Foreman 2.0_3: -146549425
+      Jan Foreman 2.0_4: 471251463
+      Jan Foreman 2.0_5: -2079118093
+      Jan Foreman 2.0_6: 2084204612
+      Jan Foreman 2.0_7: -2091678048
+      Jan Foreman 2.0_8: -2132484868
+      Jan Foreman 2.0_9: -865176161
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 namespace Assets._Scripts.ExploreScene.Environment
 {
@@ -14,6 +16,8 @@ namespace Assets._Scripts.ExploreScene.Environment
         [SerializeField] protected bool _isInRange;
 
         [SerializeField] protected string[] messages;
+
+        [SerializeField] InteractionToInventory _interactionToInventory;
 
         // Start is called before the first frame update
         protected void Start()
@@ -32,6 +36,9 @@ namespace Assets._Scripts.ExploreScene.Environment
             if(_outlineMaterial == null) _outlineMaterial = Resources.Load("Materials/outline_material") as Material;
 
             if (messages == null) messages = new string[1];
+
+            if (_interactionToInventory == null && GetComponent<InteractionToInventory>() != null) 
+                _interactionToInventory = GetComponent<InteractionToInventory>();
         }
 
         // Update is called once per frame
@@ -42,13 +49,16 @@ namespace Assets._Scripts.ExploreScene.Environment
 
         private void OnMouseUpAsButton()
         {
+            Random rnd = new Random();
+
             if (_isInRange && !_disabled)
             {
                 Interaction();
+                Player._POPUP_(messages[0]);
             }
             else if (_isInRange && _disabled && messages.Length > 0)
             {
-                Player._POPUP_(messages[0]);
+                Player._POPUP_(messages[rnd.Next(messages.Length)]);
             }
             else
             {
@@ -59,6 +69,32 @@ namespace Assets._Scripts.ExploreScene.Environment
         protected virtual void Interaction()
         {
             Debug.Log(gameObject.name + " interaction");
+            if (_interactionToInventory == null)
+                return;
+            else
+            {
+                if (_interactionToInventory.ExpectItem)
+                {
+                    Debug.Log("Expecting item " + _interactionToInventory.GetFirstExpected());
+                }
+                else
+                {
+                    var item = _interactionToInventory.GetFirstGet();
+                    if (item == null) return;
+
+                    if (InventoryPlayer.Instance.AddItem(item))
+                    {
+                        Debug.Log("Added item " + item.ItemName);
+                        _disabled = true;
+                        _spriteRenderer.material = _baseMaterial;
+                        _spriteRenderer.color = Color.gray;
+                    }
+                    else
+                    {
+                        Debug.Log("Inventory full");
+                    }
+                }
+            }
         }
 
         private void OnMouseOver()

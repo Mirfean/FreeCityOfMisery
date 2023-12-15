@@ -24,7 +24,7 @@ public class InventoryUI : MonoBehaviour
     {
         foreach(var item in items)
         {
-            if (item.ItemSO != null) return item;
+            if (item.ItemSO == null) return item;
         }
         return null;
     }

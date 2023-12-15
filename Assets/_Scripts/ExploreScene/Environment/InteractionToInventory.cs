@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class InteractionToInventory : MonoBehaviour
 {
-    [SerializeField] bool ExpectItem;
+    public bool ExpectItem;
 
     [SerializeField] InventoryItemSO[] ExpectedItems;
 
     [SerializeField] InventoryItemSO[] GetItems;
 
-    [SerializeField] bool DisableWhenEmpty;
+    public bool DisableWhenEmpty;
 
  
     // Start is called before the first frame update
@@ -23,5 +23,19 @@ public class InteractionToInventory : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public InventoryItemSO GetFirstExpected()
+    {
+        if(ExpectedItems != null && ExpectedItems.Length > 0)
+            return ExpectedItems[0];
+        return null;
+    }
+
+    public InventoryItemSO GetFirstGet()
+    {
+        if(GetItems != null && GetItems.Length > 0)
+            return GetItems[0];
+        return null;
     }
 }

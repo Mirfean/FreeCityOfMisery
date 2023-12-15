@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd50c1e674a298b4cae9ca7b29fb8874, type: 3}
-  m_Name: Inventory Item
+  m_Name: PictureofJanChad
   m_EditorClassIdentifier: 
   ID: T002
   ItemName: Picture of Jan

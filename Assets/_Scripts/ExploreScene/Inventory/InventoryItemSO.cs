@@ -11,5 +11,5 @@ public class InventoryItemSO : ScriptableObject
     public string ItemName;
     public string Description;
     public Sprite SpriteItem;
-
+    public int AdditionalUses;
 }

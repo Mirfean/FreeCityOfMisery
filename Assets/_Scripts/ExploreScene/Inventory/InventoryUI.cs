@@ -29,7 +29,7 @@ public class InventoryUI : MonoBehaviour
         return null;
     }
 
-    bool CheckIfItemInInventory(string itemID)
+    public bool CheckIfItemInInventory(string itemID)
     {
         if (GetItemById(itemID) != null) return true;
         return false;

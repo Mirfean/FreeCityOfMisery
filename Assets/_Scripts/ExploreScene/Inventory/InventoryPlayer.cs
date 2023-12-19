@@ -7,11 +7,6 @@ public class InventoryPlayer : Singleton<InventoryPlayer>
 {
     [SerializeField] InventoryUI inventoryUI;
 
-    public bool AddItem(InventoryItemSO NewItem)
-    {
-        return inventoryUI.AddItem(NewItem);
-    }
-
     private void Start()
     {
         if (inventoryUI == null) inventoryUI = FindFirstObjectByType<InventoryUI>();
@@ -21,5 +16,20 @@ public class InventoryPlayer : Singleton<InventoryPlayer>
     void Update()
     {
         
+    }
+
+    public bool CheckIfItemInInventory(string itemID)
+    {
+        return inventoryUI.CheckIfItemInInventory(itemID);
+    }
+
+    public bool AddItem(InventoryItemSO NewItem)
+    {
+        return inventoryUI.AddItem(NewItem);
+    }
+
+    public void RemoveItem(InventoryItemSO item)
+    {
+        inventoryUI.RemoveItem(item.ID);
     }
 }

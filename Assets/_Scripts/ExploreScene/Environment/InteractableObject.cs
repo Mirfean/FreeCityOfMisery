@@ -37,8 +37,7 @@ namespace Assets._Scripts.ExploreScene.Environment
 
             if (messages == null) messages = new string[1];
 
-            if (_interactionToInventory == null && GetComponent<InteractionToInventory>() != null) 
-                _interactionToInventory = GetComponent<InteractionToInventory>();
+            _interactionToInventory = GetComponent<InteractionToInventory>();
         }
 
         // Update is called once per frame
@@ -49,16 +48,14 @@ namespace Assets._Scripts.ExploreScene.Environment
 
         private void OnMouseUpAsButton()
         {
-            Random rnd = new Random();
-
             if (_isInRange && !_disabled)
             {
                 Interaction();
-                Player._POPUP_(messages[0]);
+                SendFirstMessage();       
             }
             else if (_isInRange && _disabled && messages.Length > 0)
             {
-                Player._POPUP_(messages[rnd.Next(messages.Length)]);
+                SendRandomMessage();
             }
             else
             {
@@ -76,16 +73,36 @@ namespace Assets._Scripts.ExploreScene.Environment
                 if (_interactionToInventory.ExpectItem)
                 {
                     Debug.Log("Expecting item " + _interactionToInventory.GetFirstExpected());
+                    if (InventoryPlayer.Instance.CheckIfItemInInventory(_interactionToInventory.GetFirstExpected().ID))
+                    {
+                        Debug.Log("Item found");
+                        _interactionToInventory.UseRemoveItemFromInventory(_interactionToInventory.GetFirstExpected());
+                        _interactionToInventory.RemoveFirstFromExpected();
+                        
+                        if(_interactionToInventory.GetFirstExpected() == null)
+                            _disabled = false;
+                        
+                        Debug.Log("Using item");
+                        
+                        //DEBUG ONLY
+                        _spriteRenderer.material = _baseMaterial;
+                        _spriteRenderer.color = Color.gray;
+                    }
+                    else Debug.Log("Item not found in inventory");
                 }
                 else
                 {
-                    var item = _interactionToInventory.GetFirstGet();
+                    var item = _interactionToInventory.GetFirstGetItem();
                     if (item == null) return;
 
                     if (InventoryPlayer.Instance.AddItem(item))
                     {
                         Debug.Log("Added item " + item.ItemName);
-                        _disabled = true;
+                        //_disabled = true;
+                        
+                        _interactionToInventory.RemoveFirstGetItem();
+
+                        //DEBUG ONLY
                         _spriteRenderer.material = _baseMaterial;
                         _spriteRenderer.color = Color.gray;
                     }
@@ -120,6 +137,23 @@ namespace Assets._Scripts.ExploreScene.Environment
         private void OnTriggerExit(Collider other)
         {
             if (other.gameObject.tag == "Player") _isInRange = false;
+        }
+
+        private void SendFirstMessage()
+        {
+            if (messages != null && messages.Length > 0)
+                Player._POPUP_(messages[0]);
+            else Debug.Log("No messages");
+        }
+
+        private void SendRandomMessage()
+        {
+            if(messages != null && messages.Length > 0)
+            {
+                Random rnd = new Random();
+                Player._POPUP_(messages[rnd.Next(messages.Length)]);
+            }
+            else Debug.Log("No messages");
         }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Charisma
   m_EditorClassIdentifier: 
   power: 2
-  symbol: {fileID: 266283487, guid: 5b47689ae7807f248abbafb58cbc4f61, type: 3}
+  symbol: {fileID: 21300000, guid: 0dd87a6b3b4691f41975ebd1366dbd9a, type: 3}

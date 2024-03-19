@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 using TMPro;
+using UnityEngine;
 
 public class EndFightScreen : MonoBehaviour
 {
+    [SerializeField] TMP_Text WinLose;
+
     [SerializeField] TMP_Text player_name;
     [SerializeField] TMP_Text enemy_name;
 
@@ -14,13 +15,25 @@ public class EndFightScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void SetWinLose(bool x)
+    {
+        if(x)
+        {
+            WinLose.text = "You Win!";
+        }
+        else
+        {
+            WinLose.text = "You Lose!";
+        }
     }
 
     public void SetPlayerData(string name, int value)
@@ -43,5 +56,25 @@ public class EndFightScreen : MonoBehaviour
     void SetEnemyScore(int value)
     {
         enemy_score.text = value.ToString();
+    }
+
+    internal bool SetEndScreenData(CurrentScore PlayerScore, CurrentScore EnemyScore)
+    {
+        int playerFinalScore = 0;
+        int enemyFinalScore = 0;
+
+        foreach (var value in PlayerScore.GetAllPoints())
+        {
+            playerFinalScore += value.Value;
+        }
+
+        foreach (var value in EnemyScore.GetAllPoints())
+        {
+            enemyFinalScore += value.Value;
+        }
+
+        SetPlayerData("Player", playerFinalScore);
+        SetEnemyData("Enemy", enemyFinalScore);
+        return playerFinalScore > enemyFinalScore;
     }
 }

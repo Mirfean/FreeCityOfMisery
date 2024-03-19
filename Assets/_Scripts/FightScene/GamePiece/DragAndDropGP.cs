@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragAndDropGP : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
+public class DragAndDropGP : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] RectTransform rectTransform;
     [SerializeField] Image image;
@@ -26,7 +24,7 @@ public class DragAndDropGP : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        image = GetComponent<Image>();
+        if (image == null) image = GetComponent<Image>();
         canvasGroup = GetComponent<CanvasGroup>();
         gamePiece = GetComponent<GamePiece>();
     }
@@ -48,44 +46,23 @@ public class DragAndDropGP : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
             PlacingManager.Instance.AddTriangle(gameObject);
         }
 
-
-
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta;
+        if (!gamePiece.IMMOVABLE && gamePiece.PLAYERCARD)
+        {
+            var pos = Camera.main.ScreenToWorldPoint(eventData.position);
+            transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+            //rectTransform.anchoredPosition += eventData.delta;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         image.color = Color.white;
         canvasGroup.blocksRaycasts = true;
+        PlacingManager.Instance.MoveToOriginPos();
         PlacingManager.Instance.RemoveTriangle();
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        //image.color = Color.green;
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        //image.color = Color.white;
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        //throw new System.NotImplementedException();
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        //throw new System.NotImplementedException();
     }
 }

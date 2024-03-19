@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 401
   cardName: Charming attempt
+  description: Even the most daring ventures begin with a smile and a sparkle in
+    the eye
   effectId: 0
   cardLevel: 0
   VerticalSide: 02000000

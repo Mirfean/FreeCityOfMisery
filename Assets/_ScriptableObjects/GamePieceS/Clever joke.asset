@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 402
   cardName: Clever joke
+  description: Laughter is the key that unlocks the doors of minds
   effectId: 0
   cardLevel: 0
   VerticalSide: 02000000
   LeftSide: 04000000
   RightSide: 
+  cardEffects: []

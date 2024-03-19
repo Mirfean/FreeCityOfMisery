@@ -1,13 +1,9 @@
 ﻿using Assets._Scripts.Enum;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CURRENTGAMEDATA", menuName = "Duck/GameData"), Serializable]
-public class CurrentGameData: ScriptableObject
+public class CurrentGameData : ScriptableObject
 {
     public string CharacterName;
     public string CurrentEnemyName;
@@ -15,6 +11,7 @@ public class CurrentGameData: ScriptableObject
     public DeckSO PlayerDeck;
     public DeckSO EnemyDeck;
     public GridData _GridData;
+    public int RoundLimiter = 2;
 
     public bool LastFightWin;
     public FightResult FightResult;

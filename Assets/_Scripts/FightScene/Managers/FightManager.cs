@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,20 +6,24 @@ public class FightManager : MonoBehaviour
 {
     [SerializeField] List<DeckSO> decks;
     [SerializeField] CurrentGameData gameData;
-    
-    [SerializeField] DeckManager deckManager;
-    [SerializeField] ScoreManager scoreManager;
 
-    [SerializeField] EndFightScreen endScreenData;
+    [SerializeField] DeckManager _deckManager;
+    [SerializeField] ScoreManager _scoreManager;
+    [SerializeField] RoundManager _roundManager;
+    [SerializeField] GridGame gridGame;
 
-    [SerializeField] GameHand hand;
+    [SerializeField] EndFightScreen _endScreenData;
+
+    [SerializeField] GameHand _hand;
 
     public static Action ENDFIGHT;
 
     private void Awake()
     {
-        //if it's fight scene
         BattlePreparer();
+
+        if (gameData != null)
+            gridGame.gridData = gameData._GridData;
 
         ENDFIGHT += EndFight;
     }
@@ -33,14 +36,16 @@ public class FightManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        deckManager.DrawToFullHandPlayer();
-        deckManager.DrawToFullHandEnemy();
+        _deckManager.DrawToFullHandPlayer();
+        _deckManager.DrawToFullHandEnemy();
+
+        _roundManager.StartGame(gameData.CharacterName, gameData.CurrentEnemyName, gameData.RoundLimiter);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void BattlePreparer()
@@ -50,29 +55,34 @@ public class FightManager : MonoBehaviour
 
     void LoadDecks()
     {
-        deckManager.PreparePlayerDeck(gameData.PlayerDeck);
-        deckManager.PrepareEnemyDeck(gameData.EnemyDeck);
+        _deckManager.PreparePlayerDeck(gameData.PlayerDeck);
+        _deckManager.PrepareEnemyDeck(gameData.EnemyDeck);
     }
 
     public void EndFight()
     {
         //Compare score -> get a winner
-        var finalScore = scoreManager.GetFinalScore();
-        gameData.FightResult = finalScore;
-        gameData.LastFightWin = finalScore.Success;
+        //var finalScore = _scoreManager.GetFinalScore();
+        //gameData.FightResult = finalScore;
+        //gameData.LastFightWin = finalScore.Success
 
-        endScreenData.SetPlayerData(gameData.CharacterName, scoreManager.PlayerScore.GetSum());
-        endScreenData.SetEnemyData(gameData.CurrentEnemyName, scoreManager.EnemyScore.GetSum());
 
-        if (finalScore.Success)
+        //_endScreenData.SetPlayerData(gameData.CharacterName, _scoreManager.PlayerScore.GetSum());
+        //_endScreenData.SetEnemyData(gameData.CurrentEnemyName, _scoreManager.EnemyScore.GetSum());
+
+/*        if (finalScore.Success)
         {
             // Send info win/lose + order of most used powers(for future)
-        }
+        }*/
 
         //Effects
 
 
         //Hide scene by using method from game manager
-        GameManager.HideFight();
+    }
+
+    public void EndFightToExplore()
+    {
+        ExploreManager.HideFight();
     }
 }

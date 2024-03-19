@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Pushy Flirting
   m_EditorClassIdentifier: 
   ID: 405
-  cardName: Brash Flirting
+  cardName: Bold Courting
+  description: In matters of the heart, audacity often speaks louder than words.
   effectId: 0
   cardLevel: 1
   VerticalSide: 01000000
   LeftSide: 0200000001000000
   RightSide: 
+  cardEffects: []

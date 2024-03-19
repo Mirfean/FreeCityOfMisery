@@ -17,8 +17,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Cards
+  - DeckDiscard
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DeckDiscard
+    uniqueID: 1881036903
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 2467334633
     locked: 0

@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 public class DeckManager : MonoBehaviour
 {
@@ -20,13 +18,18 @@ public class DeckManager : MonoBehaviour
 
 
     [SerializeField] SpawnerGamePiece _spawnerGamePiece;
-    
+
     [SerializeField] Transform discard_Player;
     [SerializeField] Transform discard_Enemy;
 
     public static Action<DeckSO> LoadPlayerDeck;
     public static Action<DeckSO> LoadEnemyDeck;
     public static Action DrawFullHand;
+
+    public List<GamePiece> PlayerDeck { get => _playerDeck; set => _playerDeck = value; }
+    public List<GamePiece> PlayerDiscard { get => _playerDiscard; set => _playerDiscard = value; }
+    public GameHand PlayerHand { get => _playerHand; set => _playerHand = value; }
+
 
     public List<GamePiece> EnemyDeck { get => _enemyDeck; set => _enemyDeck = value; }
     public List<GamePiece> EnemyDiscard { get => _enemyDiscard; set => _enemyDiscard = value; }
@@ -87,7 +90,7 @@ public class DeckManager : MonoBehaviour
                 result.Add(_spawnerGamePiece.SpawnEnemyGamePiece(SO));
             }
         }
-        
+
         return result;
     }
 
@@ -109,7 +112,7 @@ public class DeckManager : MonoBehaviour
 
     void DrawCards(int cardsToDraw, bool forPlayer)
     {
-        if(forPlayer)
+        if (forPlayer)
         {
             for (int i = 0; i < cardsToDraw; i++)
             {
@@ -128,24 +131,25 @@ public class DeckManager : MonoBehaviour
     public void DrawCardPlayer()
     {
         Debug.Log("Draw a card for a player");
-        if(_playerDeck.Count == 0 && _playerDiscard.Count > 0)
+        if (_playerDeck.Count == 0 && _playerDiscard.Count > 0)
         {
             Debug.Log("Shuffle player discard to deck");
             ShuffleDiscardPlayer();
         }
-        else if(_playerDiscard.Count == 0 && _playerDeck.Count == 0)
+        else if (_playerDiscard.Count == 0 && _playerDeck.Count == 0)
         {
             Debug.LogWarning("DECK IS EMPTY!!!");
         }
 
         if (_playerHand.CheckEmptySlot())
         {
-            if(_playerDeck.Count > 0)
+            if (_playerDeck.Count > 0)
             {
                 Debug.Log("Literally drawing a card");
                 GamePiece drawnCard = _playerDeck[UnityEngine.Random.Range(0, _playerDeck.Count - 1)];
                 _playerDeck.Remove(drawnCard);
                 _playerHand.PlaceCardOnHand(drawnCard);
+                drawnCard.HIDE = false;
             }
         }
         else
@@ -191,6 +195,7 @@ public class DeckManager : MonoBehaviour
     void discardPlayerCard(int id)
     {
         _playerHand.Cards[id].transform.position = discard_Player.position;
+        if (!_playerHand.Cards[id].reversed) _playerHand.Cards[id].ReverseTriangle();
         _playerDiscard.Add(_playerHand.Cards[id]);
         _playerHand.RemoveCard(id);
     }
@@ -206,13 +211,14 @@ public class DeckManager : MonoBehaviour
     void discardEnemyCard(int id)
     {
         _enemyHand.Cards[id].transform.position = discard_Enemy.position;
+        if (!_enemyHand.Cards[id].reversed) _enemyHand.Cards[id].ReverseTriangle();
         _enemyDiscard.Add(_enemyHand.Cards[id]);
         _enemyHand.RemoveCard(id);
     }
 
     public void discardAllHands()
     {
-        for(int i = 0; i < _playerHand.Cards.Length; i++)
+        for (int i = 0; i < _playerHand.Cards.Length; i++)
         {
             if (_playerHand.Cards[i] != null) discardPlayerCard(i);
         }
@@ -224,13 +230,13 @@ public class DeckManager : MonoBehaviour
 
     void ShuffleDiscardPlayer()
     {
-        if(_playerDiscard.Count != 0)
+        if (_playerDiscard.Count != 0)
         {
             _playerDeck = _playerDiscard;
             _playerDiscard = new List<GamePiece>();
         }
 
-        foreach(GamePiece piece in _playerDeck)
+        foreach (GamePiece piece in _playerDeck)
         {
             piece.transform.position = _playerDeckPlace.position;
         }

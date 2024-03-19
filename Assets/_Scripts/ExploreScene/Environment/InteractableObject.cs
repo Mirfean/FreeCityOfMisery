@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
@@ -9,7 +6,7 @@ namespace Assets._Scripts.ExploreScene.Environment
     [RequireComponent(typeof(Collider))]
     public class InteractableObject : MonoBehaviour
     {
-        [SerializeField] bool _disabled;
+        [SerializeField] protected bool _disabled;
         [SerializeField] protected SpriteRenderer _spriteRenderer;
         [SerializeField] protected Material _baseMaterial;
         [SerializeField] protected Material _outlineMaterial;
@@ -17,7 +14,7 @@ namespace Assets._Scripts.ExploreScene.Environment
 
         [SerializeField] protected string[] messages;
 
-        [SerializeField] InteractionToInventory _interactionToInventory;
+        [SerializeField] protected InteractionToInventory _interactionToInventory;
 
         // Start is called before the first frame update
         protected void Start()
@@ -31,9 +28,9 @@ namespace Assets._Scripts.ExploreScene.Environment
                 }
             }
 
-            if(_baseMaterial == null) _baseMaterial = _spriteRenderer.material;
+            if (_baseMaterial == null) _baseMaterial = _spriteRenderer.material;
 
-            if(_outlineMaterial == null) _outlineMaterial = Resources.Load("Materials/outline_material") as Material;
+            if (_outlineMaterial == null) _outlineMaterial = Resources.Load("Materials/outline_material") as Material;
 
             if (messages == null) messages = new string[1];
 
@@ -51,7 +48,7 @@ namespace Assets._Scripts.ExploreScene.Environment
             if (_isInRange && !_disabled)
             {
                 Interaction();
-                SendFirstMessage();       
+                SendFirstMessage();
             }
             else if (_isInRange && _disabled && messages.Length > 0)
             {
@@ -70,47 +67,25 @@ namespace Assets._Scripts.ExploreScene.Environment
                 return;
             else
             {
-                if (_interactionToInventory.ExpectItem)
+                var item = _interactionToInventory.GetFirstGetItem();
+                if (item == null) return;
+
+                if (InventoryPlayer.Instance.AddItem(item))
                 {
-                    Debug.Log("Expecting item " + _interactionToInventory.GetFirstExpected());
-                    if (InventoryPlayer.Instance.CheckIfItemInInventory(_interactionToInventory.GetFirstExpected().ID))
-                    {
-                        Debug.Log("Item found");
-                        _interactionToInventory.UseRemoveItemFromInventory(_interactionToInventory.GetFirstExpected());
-                        _interactionToInventory.RemoveFirstFromExpected();
-                        
-                        if(_interactionToInventory.GetFirstExpected() == null)
-                            _disabled = false;
-                        
-                        Debug.Log("Using item");
-                        
-                        //DEBUG ONLY
-                        _spriteRenderer.material = _baseMaterial;
-                        _spriteRenderer.color = Color.gray;
-                    }
-                    else Debug.Log("Item not found in inventory");
+                    Debug.Log("Added item " + item.ItemName);
+                    //_disabled = true;
+
+                    _interactionToInventory.RemoveFirstGetItem();
+
+                    //DEBUG ONLY
+/*                    _spriteRenderer.material = _baseMaterial;
+                    _spriteRenderer.color = Color.gray;*/
                 }
                 else
                 {
-                    var item = _interactionToInventory.GetFirstGetItem();
-                    if (item == null) return;
-
-                    if (InventoryPlayer.Instance.AddItem(item))
-                    {
-                        Debug.Log("Added item " + item.ItemName);
-                        //_disabled = true;
-                        
-                        _interactionToInventory.RemoveFirstGetItem();
-
-                        //DEBUG ONLY
-                        _spriteRenderer.material = _baseMaterial;
-                        _spriteRenderer.color = Color.gray;
-                    }
-                    else
-                    {
-                        Debug.Log("Inventory full");
-                    }
+                    Debug.Log("Inventory full");
                 }
+
             }
         }
 
@@ -148,7 +123,7 @@ namespace Assets._Scripts.ExploreScene.Environment
 
         private void SendRandomMessage()
         {
-            if(messages != null && messages.Length > 0)
+            if (messages != null && messages.Length > 0)
             {
                 Random rnd = new Random();
                 Player._POPUP_(messages[rnd.Next(messages.Length)]);

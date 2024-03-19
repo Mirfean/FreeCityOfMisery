@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: I made a research
   m_EditorClassIdentifier: 
   ID: 3333
-  cardName: I made a research
+  cardName: Pride of Study
+  description: Proud moments follow persistent study
   effectId: 0
   cardLevel: 1
   VerticalSide: 03000000
   LeftSide: 
   RightSide: 04000000
+  cardEffects: []

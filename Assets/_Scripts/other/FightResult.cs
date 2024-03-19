@@ -1,9 +1,6 @@
 ﻿using Assets.Scripts;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assets._Scripts.Enum
 {
@@ -34,12 +31,12 @@ namespace Assets._Scripts.Enum
 
         public void SetFinalSum()
         {
-            foreach(var f in ResultScore)
+            foreach (var f in ResultScore)
             {
                 finalSum += f.Value;
             }
 
-            if(finalSum > 0) Success = true; //Testowe gówno, później wyjebać XD
+            if (finalSum > 0) Success = true; //Testowe gówno, później wyjebać XD
         }
     }
 }

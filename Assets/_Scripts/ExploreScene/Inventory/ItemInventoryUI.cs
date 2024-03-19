@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +22,7 @@ public class ItemInventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void AddItem(InventoryItemSO item)
@@ -42,7 +40,11 @@ public class ItemInventoryUI : MonoBehaviour
 
     public void ClickItem()
     {
-        if (ItemSO != null) Debug.Log("Clicked " + ItemSO.ItemName + " " + ItemSO.Description);
+        if (ItemSO != null) 
+        {
+            Player._POPUP_(ItemSO.ItemName + " - " +ItemSO.Description);
+            Debug.Log("Clicked " + ItemSO.ItemName + " " + ItemSO.Description);
+        } 
         else Debug.Log("Clicked empty inventory");
     }
 

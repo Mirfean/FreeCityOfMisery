@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OutlineObject : MonoBehaviour
@@ -13,11 +11,11 @@ public class OutlineObject : MonoBehaviour
     // Start is called before the first frame update
     internal void Start()
     {
-/*        _baseMaterial = gameObject.GetComponent<SpriteRenderer>().material;
-        //Outline materials preparing
-        Outlines basicOutline = Outlines.OutlineBasic;
-        _outlineMaterial = Resources.Load($"Materials/{basicOutline.ToString()}") as Material;
-        _outlineMaterial.SetColor("Outline Color", Color.white);*/
+        /*        _baseMaterial = gameObject.GetComponent<SpriteRenderer>().material;
+                //Outline materials preparing
+                Outlines basicOutline = Outlines.OutlineBasic;
+                _outlineMaterial = Resources.Load($"Materials/{basicOutline.ToString()}") as Material;
+                _outlineMaterial.SetColor("Outline Color", Color.white);*/
     }
 
     internal void OnMouseEnter()

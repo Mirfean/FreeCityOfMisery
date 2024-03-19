@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Authority
   m_EditorClassIdentifier: 
   power: 3
-  symbol: {fileID: 1849146195, guid: 5b47689ae7807f248abbafb58cbc4f61, type: 3}
+  symbol: {fileID: 21300000, guid: 747d1d3825228dd49b3e89263073bb52, type: 3}

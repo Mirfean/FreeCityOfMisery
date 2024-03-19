@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryPlayer : Singleton<InventoryPlayer>
@@ -15,7 +12,7 @@ public class InventoryPlayer : Singleton<InventoryPlayer>
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public bool CheckIfItemInInventory(string itemID)

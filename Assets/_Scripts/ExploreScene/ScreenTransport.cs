@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreenTransport : MonoBehaviour
@@ -13,13 +12,13 @@ public class ScreenTransport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void PlayCut(Transform soundPlace, float time = 1f)

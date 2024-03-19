@@ -1,59 +1,102 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Round manager and also START and END of the game UI
+/// </summary>
 public class RoundManager : MonoBehaviour
 {
     [SerializeField] EnemyFightAI _enemyAI;
     [SerializeField] DeckManager _deckManager;
     [SerializeField] ScoreManager _scoreManager;
 
+    [SerializeField] GameObject _startGameUI;
+    [SerializeField] StartFightScreen _startScreenData;
+
     [SerializeField] GameObject _endResultUI;
     [SerializeField] EndFightScreen _endScreenData;
 
-    public bool PlayerRound { get; private set; }
-    
-    public int RoundLimiter { get; private set; }
+    [SerializeField] bool _playerSkipped;
+    [SerializeField] bool _enemySkipped;
+
+    public bool PlayerCanMove { get; private set; }
+
+    public int RoundLimiter;
 
     public static Action EndPlayerMove;
     // Start is called before the first frame update
     void Start()
     {
         EndPlayerMove += ConfirmMove;
-        RoundLimiter = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void ConfirmMove()
     {
-        PlayerRound = false;
+        _playerSkipped = false;
+        PlayerCanMove = false;
+        EndTurn();
+    }
+
+    public void SkipTurn()
+    {
+        _playerSkipped = true;
+        PlayerCanMove = false;
         EndTurn();
     }
 
     public void EndTurn()
     {
-        PlayerRound = false;
+        PlayerCanMove = false;
         Debug.Log("End of turn");
         if (_enemyAI.EnemyMove())
         {
-            //Player round now
+            //PlayerCanMove = true;
         }
         else
         {
-            //Enemy has no cards
-            //Play to end of this round
+            _enemySkipped = true;
         }
-        PlayerRound = true;
+        PlayerCanMove = true;
+        EndRoundCheck();
     }
 
     bool isEndRound()
     {
         return false;
+    }
+
+    public void StartGame(String Player, String Enemy, int Rounds)
+    {
+        RoundLimiter = Rounds;
+        _startGameUI.SetActive(true);
+        _startScreenData.SetRounds(RoundLimiter);
+        _startScreenData.SetEnemy(Enemy);
+        _startScreenData.SetPlayer(Player);
+    }
+
+    public void HideStartUI()
+    {
+        _startGameUI.SetActive(false);
+    }
+
+    public void EndRoundCheck()
+    {
+        if((_playerSkipped || _deckManager.PlayerHand.Cards.Length == 0)
+            && (_enemySkipped || _deckManager.EnemyHand.Cards.Length == 0))
+        {
+            EndRound();
+        }
+        else
+        {
+            PlayerCanMove = true;
+            _enemySkipped = false;
+            _playerSkipped = false;
+        }
     }
 
     public void EndRound()
@@ -66,7 +109,10 @@ public class RoundManager : MonoBehaviour
         {
             _endResultUI.SetActive(true);
             FightManager.ENDFIGHT();
-            //EndResultUI.SetActive(true);
+            _endResultUI.SetActive(true);
+            bool Success = _endScreenData.SetEndScreenData(_scoreManager.PlayerScore, _scoreManager.EnemyScore);
+
+            _endScreenData.SetWinLose(Success);
         }
     }
 }

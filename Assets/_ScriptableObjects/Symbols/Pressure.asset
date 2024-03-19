@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pressure
   m_EditorClassIdentifier: 
   power: 1
-  symbol: {fileID: 288676363, guid: 5b47689ae7807f248abbafb58cbc4f61, type: 3}
+  symbol: {fileID: 21300000, guid: fc80a9e9159a2fe4bb044f345022aede, type: 3}

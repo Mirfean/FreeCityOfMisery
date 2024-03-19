@@ -1,9 +1,7 @@
 using PixelCrushers;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueInput: MonoBehaviour
+public class DialogueInput : MonoBehaviour
 {
 #if USE_NEW_INPUT
     protected static bool isRegistered = false;

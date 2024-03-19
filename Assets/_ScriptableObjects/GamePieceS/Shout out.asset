@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Shout out
   m_EditorClassIdentifier: 
   ID: 406
-  cardName: Shout out
+  cardName: Outcry
+  description: In times of deadlock, a commanding voice can shift the balance of
+    opinion
   effectId: 0
   cardLevel: 0
   VerticalSide: 0100000003000000
   LeftSide: 01000000
   RightSide: 
+  cardEffects: []

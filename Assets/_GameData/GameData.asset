@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b342ea4849b054aa2c8b23df068a0b, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  CharacterName: 
-  CurrentEnemyName: 
+  CharacterName: Player
+  CurrentEnemyName: Opponent
   PlayerDeck: {fileID: 11400000, guid: 080ccdb932ce810429370a9631c17148, type: 2}
   EnemyDeck: {fileID: 11400000, guid: 080ccdb932ce810429370a9631c17148, type: 2}
-  _GridData: {fileID: 11400000, guid: 7caf06779cb821a4cbf478c9559f17d7, type: 2}
+  _GridData: {fileID: 11400000, guid: 28aa6246bfd7f7a4aa4f765d782989c9, type: 2}
+  RoundLimiter: 1
   LastFightWin: 0

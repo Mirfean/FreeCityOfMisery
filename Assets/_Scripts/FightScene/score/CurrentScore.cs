@@ -1,8 +1,5 @@
 using Assets.Scripts;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class CurrentScore : MonoBehaviour
@@ -23,24 +20,23 @@ public class CurrentScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void AddScore(Dictionary<int, List<PowerType>> item2)
     {
         foreach (KeyValuePair<int, List<PowerType>> keyValues in item2)
         {
-            if (keyValues.Value.Count > 0) AddFromSide(keyValues.Value);
+            if (keyValues.Value.Count > 0) AddPoints(keyValues.Value);
         }
     }
 
-    void AddFromSide(List<PowerType> powers)
+    public void AddPoints(List<PowerType> powers)
     {
-            foreach (PowerType powerType in powers)
-            {
-                AddToCounter(powerType);
-            }
-
+        foreach (PowerType powerType in powers)
+        {
+            AddToCounter(powerType);
+        }
     }
 
     public void AddToCounter(PowerType power, int value = 1)
@@ -64,7 +60,7 @@ public class CurrentScore : MonoBehaviour
     {
         var scores = GetAllPoints();
         int sum = 0;
-        foreach(var score in scores)
+        foreach (var score in scores)
         {
             sum += score.Value;
         }

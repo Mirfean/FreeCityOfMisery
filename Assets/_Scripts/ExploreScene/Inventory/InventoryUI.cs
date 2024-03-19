@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -17,12 +15,12 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     ItemInventoryUI CheckIfEmptyAvailable()
     {
-        foreach(var item in items)
+        foreach (var item in items)
         {
             if (item.ItemSO == null) return item;
         }
@@ -61,7 +59,7 @@ public class InventoryUI : MonoBehaviour
     public bool RemoveItem(string itemId)
     {
         var item = GetItemById(itemId);
-        if(item != null)
+        if (item != null)
         {
             item.RemoveItem();
             return true;
@@ -75,7 +73,7 @@ public class InventoryUI : MonoBehaviour
         if (item != null)
         {
             Debug.Log($"Use {item.ItemSO.ItemName}");
-            if(removeAfterUse) item.RemoveItem();
+            if (removeAfterUse) item.RemoveItem();
             return true;
         }
         return false;

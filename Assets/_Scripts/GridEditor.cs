@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -49,7 +47,7 @@ public class GridEditor : EditorWindow
             ApplyNewItem();
         }
 
-        
+
         GUILayout.Label("Item", EditorStyles.boldLabel);
         _id = EditorGUILayout.IntField("ID", _id);
 
@@ -89,7 +87,7 @@ public class GridEditor : EditorWindow
             {
                 _fieldsArray = _gridData.Effects;
             }
-                
+
             else
             {
                 //Debug.Log("fill is empty " + _gridData.Effects.Length);
@@ -100,23 +98,7 @@ public class GridEditor : EditorWindow
             scriptableObj = this;
             serialObj = new SerializedObject(scriptableObj);
 
-
-            /*secondItemProperty = serialObj.FindProperty("_secondItem");
-            resultProperty = serialObj.FindProperty("_result");
-
-            secondItemProperty.ClearArray();
-            resultProperty.ClearArray();*/
-
-            /*_secondItem = _gridData.SecondItem;
-            _result = _gridData.Result;*/
-
-/*            if (secondItemProperty.arraySize > 0)
-            {
-                _hasCombinables = true;
-                SetArrays();
-            }
-            else _hasCombinables = false;*/
-            foreach(GridEffect effect in _gridData.Effects)
+            foreach (GridEffect effect in _gridData.Effects)
             {
                 Debug.Log(effect);
             }
@@ -141,7 +123,7 @@ public class GridEditor : EditorWindow
             }
 
             System.Array.Copy(_fieldsArray, _gridData.Effects, _fieldsArray.Length);
-            
+
 
             _gridData.BeforeSerializeGridEffects();
 
@@ -156,20 +138,20 @@ public class GridEditor : EditorWindow
     {
         if (_gridData != null)
         {
-/*            _name = _gridData.ItemName;
-            _description = _gridData.Description;*/
+            /*            _name = _gridData.ItemName;
+                        _description = _gridData.Description;*/
             _id = _gridData.ID;
             _width = _gridData.Width;
             _height = _gridData.Height;
-/*            _icon = _gridData.ItemIcon;
-            _isKeyItem = _gridData.IsKeyItem;
-            _itemType = _gridData.itemType;*/
+            /*            _icon = _gridData.ItemIcon;
+                        _isKeyItem = _gridData.IsKeyItem;
+                        _itemType = _gridData.itemType;*/
 
             if (_gridData.Effects != null)
             {
                 _fieldsArray = _gridData.Effects;
             }
-                
+
             else
             {
                 Debug.Log("fill is empty " + _gridData.Effects.Length);
@@ -186,31 +168,32 @@ public class GridEditor : EditorWindow
             EditorGUILayout.BeginHorizontal();
             for (int i = 0; i < _width; i++)
             {
-                _fieldsArray[i, j] = (GridEffect)EditorGUILayout.EnumFlagsField(_fieldsArray[i, j]);
+                _fieldsArray[i, j] = (GridEffect)EditorGUILayout.EnumPopup(_fieldsArray[i, j]);
+                //_fieldsArray[i, j] = (GridEffect)EditorGUILayout.EnumFlagsField(_fieldsArray[i, j]);
             }
             EditorGUILayout.EndHorizontal();
         }
     }
 
-/*    void SetArrays()
-    {
-        if (_hasCombinables && _secondItem != null)
+    /*    void SetArrays()
         {
-            secondItemProperty.arraySize = _secondItem.Length;
-            resultProperty.arraySize = _result.Length;
-            for (int i = 0; i < _secondItem.Length; i++)
+            if (_hasCombinables && _secondItem != null)
             {
-                secondItemProperty.GetArrayElementAtIndex(i).stringValue = _secondItem[i];
-                resultProperty.GetArrayElementAtIndex(i).stringValue = _result[i];
+                secondItemProperty.arraySize = _secondItem.Length;
+                resultProperty.arraySize = _result.Length;
+                for (int i = 0; i < _secondItem.Length; i++)
+                {
+                    secondItemProperty.GetArrayElementAtIndex(i).stringValue = _secondItem[i];
+                    resultProperty.GetArrayElementAtIndex(i).stringValue = _result[i];
+                }
             }
-        }
-        else
-        {
-            secondItemProperty.arraySize = 0;
-            resultProperty.arraySize = 0;
-        }
+            else
+            {
+                secondItemProperty.arraySize = 0;
+                resultProperty.arraySize = 0;
+            }
 
-    }*/
+        }*/
 
 }
 

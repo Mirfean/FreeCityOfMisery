@@ -1,6 +1,6 @@
+using Assets._Scripts.Enum;
 using Assets.Scripts;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,18 +43,21 @@ public class GridGame : MonoBehaviour
     [SerializeField] GameObject gridTriReversed;
     [SerializeField] Transform gridTransform;
 
-    [SerializeField] GridData gridData;
+    public GridData gridData;
 
     [SerializeField] int width;
     [SerializeField] int height;
 
-    [SerializeField] GameObject [,] gridCore;
-    [SerializeField] GridTriangle [,] gridTriangles;
+    [SerializeField] GameObject[,] gridCore;
+    [SerializeField] GridTriangle[,] gridTriangles;
     [SerializeField] HashSet<PositionGrid> availablePositions;
 
 
     [SerializeField] RectTransform triangleToSize;
-    [SerializeField, Range(0f,100f)]float gridModifier;
+    [SerializeField, Range(0f, 100f)] float gridModifier;
+
+    [SerializeField] SpawnerGamePiece spawnerGamePiece;
+    [SerializeField] PlacingManager placingManager;
 
     //TEMPORARY
     public GameObject TRIANGLE;
@@ -69,23 +72,30 @@ public class GridGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(gridData != null)
+        if (gridData != null)
         {
             width = gridData.Width;
             height = gridData.Height;
+        
         }
 
         GenerateGrid();
 
         availablePositions = new HashSet<PositionGrid>();
 
+        SetNeighboursForGridTriangles();
+
+        PlaceGridEffects();
+
         SpawnStartingTriangles();
+
+        SetNeighboursForGridTriangles();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void GenerateGrid()
@@ -94,23 +104,27 @@ public class GridGame : MonoBehaviour
         gridTriangles = new GridTriangle[Width, Height];
 
         Vector2 startPoint = gameObject.GetComponent<RectTransform>().anchoredPosition;
-        Vector2 triangleSize = new Vector2(100f, 100f);
-        
+        Vector2 triangleSize = new Vector2(150f, 150f);
+
         CreateGridTriangles(startPoint, triangleSize);
 
-        PlaceGridEffects();
 
-        SetNeighboursForGridTriangles();
     }
 
     private void PlaceGridEffects()
     {
         if (gridData == null) return;
 
-        for(int i = 0; i < gridData.Width; i++)
+        for (int i = 0; i < gridData.Width; i++)
         {
-            for(int j = 0; j < gridData.Height; j++)
+            for (int j = 0; j < gridData.Height; j++)
             {
+                if (gridData.Effects[i,j] == GridEffect.DISABLED)
+                {
+                    GridCore[i, j].SetActive(false);
+                    continue;
+                }
+                GamePiece newEffectGamePiece;
                 switch (gridData.Effects[i, j])
                 {
                     case GridEffect.EMPTY:
@@ -118,11 +132,55 @@ public class GridGame : MonoBehaviour
                     case GridEffect.DISABLED:
                         GridCore[i, j].SetActive(false);
                         break;
+                    case GridEffect.MINE:
+                        Debug.Log("Mine");
+                        break;
+                    case GridEffect.ALL_AUT:
+                        if ((int)gridData.Effects[i, j] == -1) continue;
+                        newEffectGamePiece =
+                            spawnerGamePiece.SpawnGamePieceFromEffectsList(gridData.Effects[i, j]);
+                        placingManager.PlaceTriangleToGridCell(
+                            GridCore[i, j],
+                            newEffectGamePiece.gameObject, 0, false, CurrentPointReceiver.Neutral);
+                         break;
+                    case GridEffect.ALL_PRE:
+                        if ((int)gridData.Effects[i, j] == -1) continue;
+                        newEffectGamePiece =
+                            spawnerGamePiece.SpawnGamePieceFromEffectsList(gridData.Effects[i, j]);
+                        placingManager.PlaceTriangleToGridCell(
+                            GridCore[i, j],
+                            newEffectGamePiece.gameObject, 0, false, CurrentPointReceiver.Neutral);
+                        break;
+                    case GridEffect.ALL_LOG:
+                        if ((int)gridData.Effects[i, j] == -1) continue;
+                        newEffectGamePiece =
+                            spawnerGamePiece.SpawnGamePieceFromEffectsList(gridData.Effects[i, j]);
+                        placingManager.PlaceTriangleToGridCell(
+                            GridCore[i, j],
+                            newEffectGamePiece.gameObject, 0, false, CurrentPointReceiver.Neutral);
+                        break;
+                    case GridEffect.ALL_CHA:
+                        if ((int)gridData.Effects[i,j] == -1) continue;
+                        newEffectGamePiece =
+                            spawnerGamePiece.SpawnGamePieceFromEffectsList(gridData.Effects[i,j]);
+                        placingManager.PlaceTriangleToGridCell(
+                            GridCore[i, j],
+                            newEffectGamePiece.gameObject, 0, false, CurrentPointReceiver.Neutral);
+                        break;
+                    case GridEffect.BONUS_AUT:
+                        break;
+                    case GridEffect.BONUS_PRE:
+                        break;
+                    case GridEffect.BONUS_LOG:
+                        break;
+                    case GridEffect.BONUS_CHA:
+                        
+                        break;
                 }
-                
+
             }
         }
-        
+
     }
 
     private void CreateGridTriangles(Vector2 startPoint, Vector2 triangleSize)
@@ -149,35 +207,38 @@ public class GridGame : MonoBehaviour
                 triangle.transform.localScale = Vector3.one;
                 GridCore[i, j] = triangle;
                 gridTriangles[i, j] = GridCore[i, j].GetComponent<GridTriangle>();
-
+                
                 gridTriangles[i, j].SetTriangle(i, j);
 
 
+                //DEBUG NUMBERS FOR GRID
+                //gridTriangles[i, j].XIndex = i;
+                //gridTriangles[i, j].YIndex = j;
             }
         }
     }
 
     private void SetNeighboursForGridTriangles()
     {
-        Debug.Log("grid size " +gridTriangles.Length);
+        Debug.Log("grid size " + gridTriangles.Length);
         foreach (GridTriangle gridTriangle in gridTriangles)
         {
             if (gridTriangle == null) continue;
 
-            if(gridTriangle.Neighbours.Length == 0)
+            if (gridTriangle.Neighbours.Length == 0)
             {
                 gridTriangle.SetNewNeighbours();
-                //Debug.Log("Setting new neighbours for " + gridTriangle.XIndex + gridTriangle.YIndex);
             }
 
-            if (gridTriangle.IsReversed && gridTriangle.YIndex + 1 < height)
-            {
-                gridTriangle.SetNeighbour(0, gridTriangles[gridTriangle.XIndex, gridTriangle.YIndex + 1]);
-            }
-            else if (!gridTriangle.IsReversed && gridTriangle.YIndex - 1 >= 0)
+            if (gridTriangle.IsReversed && gridTriangle.YIndex - 1 >= 0)
             {
                 gridTriangle.SetNeighbour(0, gridTriangles[gridTriangle.XIndex, gridTriangle.YIndex - 1]);
             }
+            else if (!gridTriangle.IsReversed && gridTriangle.YIndex + 1 < height)
+            {
+                gridTriangle.SetNeighbour(0, gridTriangles[gridTriangle.XIndex, gridTriangle.YIndex + 1]);
+            }
+
             if (gridTriangle.XIndex - 1 >= 0)
             {
                 gridTriangle.SetNeighbour(1, gridTriangles[gridTriangle.XIndex - 1, gridTriangle.YIndex]);
@@ -196,16 +257,16 @@ public class GridGame : MonoBehaviour
         bool x = i % 2 == 0;
         bool y = j % 2 == 0;
 
-        if(x == y) return false;
+        if (x == y) return false;
         return true;
     }
 
     void SpawnStartingTriangles()
     {
         if (gridData.StartingGamePieces == null) return;
-        foreach(var triangle in gridData.StartingGamePieces)
+        foreach (var triangle in gridData.StartingGamePieces)
         {
-            SpawnAndRotateStartingTriangle(triangle.IndexX, triangle.IndexY, triangle.gamePiece, triangle.rotation);        
+            SpawnAndRotateStartingTriangle(triangle.IndexX, triangle.IndexY, triangle.gamePiece, triangle.rotation);
         }
     }
 
@@ -246,7 +307,7 @@ public class GridGame : MonoBehaviour
         }
 
         PositionGrid temp = Find(x, y);
-        if(temp.x >=0 && temp.y >= 0)
+        if (temp.x >= 0 && temp.y >= 0)
         {
             AvailablePositions.Remove(temp);
         }

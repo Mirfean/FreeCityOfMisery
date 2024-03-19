@@ -15,7 +15,11 @@ MonoBehaviour:
   ID: 13
   Width: 3
   Height: 3
-  serializableEffect: []
+  StartingGamePieces:
+  - IndexX: 0
+    IndexY: 0
+    gamePiece: {fileID: 0}
+    rotation: 0
   serializableField:
   - IndexX: 0
     IndexY: 0

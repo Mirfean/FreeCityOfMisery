@@ -1,11 +1,8 @@
-using Language.Lua;
 using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.Yarn;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Yarn.Unity;
 
 namespace WIELKAPOLSKA
 {

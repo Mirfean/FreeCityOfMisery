@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] PopupMessage popupMessage;
 
     [SerializeField] AudioSource _movestepSound;
-    
+
     public static Action<Transform> _TELEPORT_;
 
     public static Action<string> _POPUP_;
@@ -37,9 +36,17 @@ public class Player : MonoBehaviour
         playerInput.Enable();
         playerInput.Player.Move.performed += Move;
         playerInput.Player.Move.canceled += stopMovement;
+        playerInput.Player.StartFight.performed += _DEBUG_StartFight;
 
         _TELEPORT_ += Teleport;
         _POPUP_ += ShowPopUp;
+    }
+
+    private void _DEBUG_StartFight(InputAction.CallbackContext context)
+    {
+        Debug.Log("Heh");
+        //Some changes before the fight starts
+        ExploreManager.StartFightScene();
     }
 
     private void OnDisable()
@@ -57,12 +64,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        if (moveCoroutine != null) StopCoroutine(moveCoroutine); 
+        if (moveCoroutine != null) StopCoroutine(moveCoroutine);
         moveCoroutine = StartCoroutine(move(ctx.ReadValue<Vector2>()));
         //StartCoroutine(move(ctx.ReadValue<Vector2>()));
     }
@@ -80,8 +87,8 @@ public class Player : MonoBehaviour
                 _spriteTransform.Rotate(0, -180, 0);
                 transform.position += new Vector3(speed * 10 * Time.deltaTime * movement.x, 0, 0);
                 _rotatedSprite = true;
-            } 
-            
+            }
+
         }
 
         else
@@ -93,19 +100,19 @@ public class Player : MonoBehaviour
                 transform.position += new Vector3(speed * 10 * Time.deltaTime * movement.x, 0, 0);
                 _rotatedSprite = false;
             }
-            
-        } 
-            
-        while(playerInput.Player.Move.ReadValue<Vector2>().x != 0)
+
+        }
+
+        while (playerInput.Player.Move.ReadValue<Vector2>().x != 0)
         {
-            transform.position += new Vector3(speed * Time.deltaTime *  movement.x, 0, 0);
+            transform.position += new Vector3(speed * Time.deltaTime * movement.x, 0, 0);
             yield return null;
-            if(currentTime < Time.time)
+            if (currentTime < Time.time)
             {
                 _movestepSound.Play();
                 currentTime = Time.time + SoundTime;
             }
-            
+
         }
         moveCoroutine = null;
     }
@@ -116,7 +123,7 @@ public class Player : MonoBehaviour
         animator.SetBool("walk", false);    // refactor
     }
 
-    
+
 
     public void Teleport(Transform newPosition)
     {

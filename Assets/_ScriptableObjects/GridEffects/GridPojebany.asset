@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: GridPojebany
   m_EditorClassIdentifier: 
   ID: 42069
-  Width: 5
-  Height: 3
+  Width: 10
+  Height: 5
   StartingGamePieces:
-  - IndexX: 1
-    IndexY: 0
+  - IndexX: 4
+    IndexY: 3
     gamePiece: {fileID: 11400000, guid: 9319fef0eb120254ba6f08ba7ea62c8d, type: 2}
     rotation: 1
   serializableField:
@@ -26,43 +26,148 @@ MonoBehaviour:
     Element: 0
   - IndexX: 0
     IndexY: 1
-    Element: 1
+    Element: 0
   - IndexX: 0
     IndexY: 2
-    Element: 1
+    Element: 0
+  - IndexX: 0
+    IndexY: 3
+    Element: 0
+  - IndexX: 0
+    IndexY: 4
+    Element: 0
   - IndexX: 1
     IndexY: 0
     Element: 0
   - IndexX: 1
     IndexY: 1
-    Element: 0
+    Element: 8
   - IndexX: 1
     IndexY: 2
+    Element: 0
+  - IndexX: 1
+    IndexY: 3
+    Element: 0
+  - IndexX: 1
+    IndexY: 4
     Element: 0
   - IndexX: 2
     IndexY: 0
     Element: 0
   - IndexX: 2
     IndexY: 1
-    Element: 1
+    Element: 0
   - IndexX: 2
     IndexY: 2
     Element: 0
+  - IndexX: 2
+    IndexY: 3
+    Element: 0
+  - IndexX: 2
+    IndexY: 4
+    Element: 0
   - IndexX: 3
     IndexY: 0
-    Element: 1
+    Element: 7
   - IndexX: 3
     IndexY: 1
     Element: 0
   - IndexX: 3
     IndexY: 2
-    Element: 1
+    Element: 7
+  - IndexX: 3
+    IndexY: 3
+    Element: 0
+  - IndexX: 3
+    IndexY: 4
+    Element: 7
   - IndexX: 4
     IndexY: 0
     Element: 0
   - IndexX: 4
     IndexY: 1
-    Element: 0
+    Element: 8
   - IndexX: 4
     IndexY: 2
+    Element: 10
+  - IndexX: 4
+    IndexY: 3
+    Element: 0
+  - IndexX: 4
+    IndexY: 4
+    Element: 0
+  - IndexX: 5
+    IndexY: 0
+    Element: 0
+  - IndexX: 5
+    IndexY: 1
+    Element: 0
+  - IndexX: 5
+    IndexY: 2
+    Element: 0
+  - IndexX: 5
+    IndexY: 3
+    Element: 0
+  - IndexX: 5
+    IndexY: 4
+    Element: 0
+  - IndexX: 6
+    IndexY: 0
+    Element: 0
+  - IndexX: 6
+    IndexY: 1
+    Element: 0
+  - IndexX: 6
+    IndexY: 2
+    Element: 7
+  - IndexX: 6
+    IndexY: 3
+    Element: 0
+  - IndexX: 6
+    IndexY: 4
+    Element: 0
+  - IndexX: 7
+    IndexY: 0
+    Element: 0
+  - IndexX: 7
+    IndexY: 1
+    Element: 0
+  - IndexX: 7
+    IndexY: 2
+    Element: 0
+  - IndexX: 7
+    IndexY: 3
+    Element: 0
+  - IndexX: 7
+    IndexY: 4
+    Element: 0
+  - IndexX: 8
+    IndexY: 0
+    Element: 0
+  - IndexX: 8
+    IndexY: 1
+    Element: 0
+  - IndexX: 8
+    IndexY: 2
+    Element: 0
+  - IndexX: 8
+    IndexY: 3
+    Element: 0
+  - IndexX: 8
+    IndexY: 4
+    Element: 0
+  - IndexX: 9
+    IndexY: 0
+    Element: 0
+  - IndexX: 9
+    IndexY: 1
+    Element: 0
+  - IndexX: 9
+    IndexY: 2
+    Element: 0
+  - IndexX: 9
+    IndexY: 3
+    Element: 0
+  - IndexX: 9
+    IndexY: 4
     Element: 0

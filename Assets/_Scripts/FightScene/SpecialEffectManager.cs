@@ -1,6 +1,5 @@
 using Assets.Scripts;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,11 +37,11 @@ public class SpecialEffectManager : MonoBehaviour
         switch (cardEffect.effect)
         {
             case SpecialEffects.AddPts:
-                scoreManager.GetCurrentUserScore(roundManager.PlayerRound).
+                scoreManager.GetCurrentUserScore(roundManager.PlayerCanMove).
                     AddToCounter(cardEffect.powerType, cardEffect.value);
                 break;
             case SpecialEffects.RemovePts:
-                scoreManager.GetCurrentUserScore(roundManager.PlayerRound).
+                scoreManager.GetCurrentUserScore(roundManager.PlayerCanMove).
                     AddToCounter(cardEffect.powerType, -cardEffect.value);
                 break;
         }
@@ -50,11 +49,11 @@ public class SpecialEffectManager : MonoBehaviour
 
     void ActivateAllEffects(List<CardEffect> cardEffects)
     {
-        foreach(CardEffect cardEffect in cardEffects)
+        foreach (CardEffect cardEffect in cardEffects)
         {
             Debug.Log("Activate effect " + cardEffect.name);
             UseEffect(cardEffect);
         }
-        
+
     }
 }

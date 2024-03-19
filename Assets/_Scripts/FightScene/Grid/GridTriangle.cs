@@ -1,6 +1,4 @@
 using Assets.Scripts;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -42,7 +40,7 @@ public class GridTriangle : MonoBehaviour, IDropHandler
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SetTriangle(int x, int y)
@@ -53,7 +51,7 @@ public class GridTriangle : MonoBehaviour, IDropHandler
         gameObject.name = $"gridTriangle[{x} {y}]";
 
         //DEBUG
-        if(gameObject.GetComponent<DebugGridTriangle>() != null)
+        if (gameObject.GetComponent<DebugGridTriangle>() != null)
         {
             gameObject.GetComponent<DebugGridTriangle>().ChangeTexts(x, y);
         }
@@ -71,7 +69,7 @@ public class GridTriangle : MonoBehaviour, IDropHandler
 
         else
         {
-            //PlacingManager.Instance.MoveToOriginPos();
+            PlacingManager.Instance.MoveToOriginPos();
         }
 
 
@@ -99,9 +97,9 @@ public class GridTriangle : MonoBehaviour, IDropHandler
     {
         for (int x = 0; x < neighbours.Length; x++)
         {
-            if(neighbours[x] != null)
+            if (neighbours[x] != null)
             {
-                if(neighbours[x].attachedPiece != null) return true;
+                if (neighbours[x].attachedPiece != null) return true;
             }
         }
         return false;
@@ -117,6 +115,7 @@ public class GridTriangle : MonoBehaviour, IDropHandler
 
     public void ChangeTriangleMaterial(Material material)
     {
+        
         triangleImage.material = material;
     }
 }

@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GridData", menuName = "Duck/GridData"), Serializable]
@@ -16,7 +14,7 @@ public class GridData : ScriptableObject
     {
         get
         {
-            if(effects.Length == 0) AfterDeserializeGridEffects();
+            if (effects.Length == 0) AfterDeserializeGridEffects();
             return effects;
         }
         set { effects = value; }
@@ -50,7 +48,7 @@ public class GridData : ScriptableObject
         {
             for (int j = 0; j < Effects.GetLength(1); j++)
             {
-                serializableField.Add(new Field<int>(i, j,(int) Effects[i, j]));
+                serializableField.Add(new Field<int>(i, j, (int)Effects[i, j]));
                 Debug.Log("ELO!");
             }
         }
@@ -62,7 +60,7 @@ public class GridData : ScriptableObject
         Effects = new GridEffect[Width, Height];
         foreach (var package in serializableField)
         {
-            Effects[package.IndexX, package.IndexY] = (GridEffect) package.Element;
+            Effects[package.IndexX, package.IndexY] = (GridEffect)package.Element;
             Debug.Log("Deserialize " + package.Element);
         }
     }

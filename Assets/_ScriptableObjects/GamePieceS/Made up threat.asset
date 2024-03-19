@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 403
   cardName: Made up threat
+  description: Crafted from the fabric of fiction, yet sharp as any blade
   effectId: 0
   cardLevel: 0
   VerticalSide: 01000000
   LeftSide: 03000000
   RightSide: 04000000
+  cardEffects: []
